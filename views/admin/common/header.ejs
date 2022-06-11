@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="img/logo.png" type="image/png" />
+	<!--plugins-->
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<!-- loader-->
+	<link href="assets/css/pace.min.css" rel="stylesheet" />
+	<script src="assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
+	<!-- Theme Style CSS -->
+	<link rel="stylesheet" href="assets/css/dark-theme.css" />
+	<link rel="stylesheet" href="assets/css/semi-dark.css" />
+	<link rel="stylesheet" href="assets/css/header-colors.css" />
+	<title>VIVID DESIGN ADMIN PANEL</title>
+</head>
+
+<body class="bg-theme bg-theme10">
+	<!--wrapper-->
+	<div class="wrapper">
+		<!--sidebar wrapper -->
+		<div class="sidebar-wrapper" data-simplebar="true">
+			<div class="sidebar-header">
+				<div>
+					<img class="extra_logo" src="../img/logo/pic1.jpeg" height="35px" width="50px" alt="">
+				</div>
+				<div>
+					<h4 class="logo-text">Vivid</h4>
+				</div>
+				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
+				</div>
+			</div>
+			<!--navigation-->
+			<ul class="metismenu" id="menu">
+				<li>
+					<a href="/admin/">
+						<div class="parent-icon"><i class='bx bx-home-circle'></i>
+						</div>
+						<div class="menu-title">Dashboard</div>
+					</a>
+				</li>
+        		
+				<li>
+					<a href="/admin/admin_blog">
+						<div class="parent-icon"><i class='lni lni-blogger'></i>
+						</div>
+						<div class="menu-title">Customize Blog</div>
+					</a>
+				</li>
+				<li>
+					<a href="/admin/admin_gallery">
+						<div class="parent-icon"><i class='bx bx-image'></i>
+						</div>
+						<div class="menu-title">Customize Gallery Page</div>
+					</a>
+				</li>
+			
+				
+				<li>
+					<a href="/admin/admin_exterior">
+						<div class="parent-icon"><i class='bx bx-home-alt'></i>
+						</div>
+						<div class="menu-title">Exterior Page</div>
+					</a>
+				</li>
+				<li>
+					<a href="/admin/admin_interior">
+						<div class="parent-icon"><i class='bx bx-diamond'></i>
+						</div>
+						<div class="menu-title">Interior Page</div>
+					</a>
+				</li>
+				<li>
+					<a href="/admin/admin_partner">
+						<div class="parent-icon"><i class='bx bx-man'></i>
+						</div>
+						<div class="menu-title">business Partner</div>
+					</a>
+				</li>
+				<li>
+					<a href="/admin/admin_civilwork">
+						<div class="parent-icon"><i class='bx bx-radar'></i>
+						</div>
+						<div class="menu-title">Civil Work Page</div>
+					</a>
+				</li>
+				<li>
+					<a href="/admin/admin_fabricator">
+						<div class="parent-icon"><i class='bx bx-closet'></i>
+						</div>
+						<div class="menu-title">Fabricator Page</div>
+					</a>
+				</li>
+				<li>
+					<a href="/admin/admin_branding">
+						<div class="parent-icon"><i class='bx bx-purchase-tag'></i>
+						</div>
+						<div class="menu-title">Branding Page</div>
+					</a>
+				</li>
+				<li>
+					<a href="/admin/admin_pastecontrol">
+						<div class="parent-icon"><i class='bx bx-news'></i>
+						</div>
+						<div class="menu-title">Paste Control Page</div>
+					</a>
+				</li>
+				<li>
+					<a href="/admin/admin_securitysystem">
+						<div class="parent-icon"><i class='bx bx-lock'></i>
+						</div>
+						<div class="menu-title">Security System page</div>
+					</a>
+				</li>
+				<li>
+					<a href="/admin/admin_datanetwork">
+						<div class="parent-icon"><i class='bx bx-cloud'></i>
+						</div>
+						<div class="menu-title">Data Network Page</div>
+					</a>
+				</li>
+				<li>
+					<a href="/admin/admin_upcomingproject">
+						<div class="parent-icon"><i class='bx bx-show'></i>
+						</div>
+						<div class="menu-title">Upcoming Projects Page</div>
+					</a>
+				</li>
+				<li>
+					<a href="/admin/admin_logout">
+						<div class="parent-icon"><i class='bx bx-log-out-circle'></i>
+						</div>
+						<div class="menu-title">Log Out</div>
+					</a>
+				</li>
+			</ul>
+			<!--end navigation-->
+		</div>
+		<!--end sidebar wrapper -->
+		<!--start header -->
+		<header>
+			<div class="topbar d-flex align-items-center">
+				<nav class="navbar navbar-expand">
+					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
+					</div>
+					<div class="top-menu ms-auto">
+						<ul class="navbar-nav align-items-center">
+							<li class="nav-item dropdown dropdown-large">
+								<div class="dropdown-menu dropdown-menu-end">
+								</div>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								<div class="dropdown-menu dropdown-menu-end">
+									<div class="header-notifications-list">
+									</div>
+								</div>
+							</li>
+							<li class="nav-item dropdown dropdown-large">
+								<div class="dropdown-menu dropdown-menu-end">
+									<div class="header-message-list">
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="user-box dropdown">
+						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<span id="admin-img-nav">
+
+							</span>
+							<div class="user-info ps-3" id="admin-info-nav">
+								
+							</div>
+						</a>
+				
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="/admin_profile"><i class="bx bx-user"></i><span>Profile</span></a>
+							</li>
+							<li><a class="dropdown-item" href="/admin_settings"><i class="bx bx-cog"></i><span>Settings</span></a>
+							</li>
+							<li><a class="dropdown-item" href="/"><i class='bx bx-home-circle'></i><span>Dashboard</span></a>
+							</li>
+							<li>
+								<div class="dropdown-divider mb-0"></div>
+							</li>
+							<li><a class="dropdown-item" href="/logout"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!--end header -->

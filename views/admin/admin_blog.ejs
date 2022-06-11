@@ -1,0 +1,115 @@
+<%- include("common/header.ejs") %>
+		<!--end header -->
+		<!--start page wrapper -->
+		<div class="page-wrapper">
+			<div class="page-content">
+				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+					<div class="breadcrumb-title pe-3">Dashboard</div>
+					<div class="ps-3">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 p-0">
+								<li class="breadcrumb-item"><a href="/admin_blog"><i class="bx bx-home-alt"></i></a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Customize Blog</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				
+				<!--end row-->
+				<div class="row">
+					<div class="col-xl-2 d-flex"></div>
+					<div class="col-xl-8 d-flex">
+						<div class="card radius-10 w-100">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div>
+										<h5 class="mb-1">Add Blog Data</h5>
+									</div>
+								</div>
+								<br>
+								<form action="/admin/add_blog" method="post" class="row g-3 needs-validation" enctype="multipart/form-data">
+
+								
+									<label for="blog_title" class="form-label">Add Blog Title</label>
+									<input id="blog_title" class="form-control form-control-sm mb-3" type="text" placeholder="Add Blog Title" aria-label=".form-control-sm example" name="blog_title" required>
+
+
+									<label for="blog_meta_description" class="form-label">Add Blog Meta Description</label>
+									<textarea id="blog_meta_description" class="form-control form-control-sm mb-3" placeholder="Add Blog Meta Description..." rows="3" aria-label=".form-control-sm example" name="blog_meta_description" required></textarea>
+
+
+									<label for="blog_description" class="form-label">Add Blog Description</label>
+									<textarea id="blog_description" class="form-control form-control-sm mb-3" placeholder="Add Blog Description..." rows="6" aria-label=".form-control-sm example" name="blog_description" required></textarea>
+
+
+									<div class="mb-3">
+										<label for="blog_image" class="form-label">Add Blog Picture</label>
+										<input class="form-control" type="file" id="blog_image" name="image" required>
+									</div>
+
+
+									<div class="col-12">
+										<button class="btn btn-light" type="submit">Submit form</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-2 d-flex"></div>
+				</div>
+				<!--end row-->
+				<div class="row">
+					<div class="col-xl-12 d-flex">
+						<div class="card radius-10 w-100">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div>
+										<h5 class="mb-1">Blog Data</h5>
+									</div>
+								</div>
+								<div class="table-responsive mt-4">
+									<table class="table align-middle mb-0 table-hover table-striped text-center" id="blog-details">
+										<thead class="table-light">
+											<tr>
+												<th>Date & Time</th>
+												<th>Blog Title</th>
+												<th>Blog Meta Description</th>
+												<th>Blog  Description</th>
+												<th>Blog  Image</th>
+												<th >Action</th>
+											</tr>
+										</thead>
+										<% if(displayblogdata.length>0) {%>
+											<tbody id="blog-table">
+											  <% for(let blog of displayblogdata){ %>
+											  <tr>
+												<td><%= blog.created_at %></td>
+												<td><%= blog.blog_title %></td>
+												<td><%= blog.blog_meta_description %></td>
+												<td><%= blog.blog_description %></td>
+												<td><img src="/<%=blog.image%>" alt="Blog image" width="50px" height="50px"></td>
+												<td><a href="delete_blog/<%= blog._id%>" class="btn btn-danger">Delete</a></td>
+											  </tr>
+											  
+											</tbody>
+											<%}}else{%>
+											<h1>No Blog Found</h1>
+											<% } %>
+									</table>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end Row-->
+			</div>
+		</div>
+		<!--end page wrapper -->
+		<!--start overlay-->
+		<div class="overlay toggle-icon"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<%- include("common/footer.ejs") %>

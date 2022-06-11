@@ -1,0 +1,76 @@
+<%- include("common/header") %>
+
+
+            <!--================End Header Area =================-->
+
+            <div class="container-fluid bg-secondary py-5">
+                <div class="container py-5">
+                    <div class="row align-items-center py-4">
+                        <div class="col-md-6 text-center text-md-left">
+                            <h1 class="mb-4 mb-md-0 text-primary text-uppercase">Fabricator Service</h1>
+                        </div>
+                        <div class="col-md-6 text-center text-md-right">
+                            <div class="d-inline-flex align-items-center">
+                                <a class="btn btn-outline-primary" href="">Services</a>
+                                <i class="fas fa-angle-double-right text-primary mx-2"></i>
+                                <a class="btn btn-outline-primary disabled" href="">Fabricator</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <!-- Page Header Start -->
+              
+
+  
+           <br><br>
+
+            <!--================Our Team Area =================-->
+            <section class="our_team_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="main_title wow fadeIn">
+                                <h2 class="wow" data-splitting style="font-size:30px; font-style: italic; font-family: 'Times New Roman', Times, serif;">What <span style="color:rgb(204, 101, 118);">Fabricator </span> Means</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="main_title">
+                                <p class="wow fadeInLeft" data-wow-delay="400ms" style="color: black; font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 20px;">Fabrication manufacturing processes differ depending on the material and the desired end product. The process can be used in making mass-produced products or custom designs. Whether mass-produced or custom designed, the end products are made with a wide range of metals and their alloys—stainless steel, carbon steel, aluminum, copper, brass to name a few. In industrial fabrication processes, chances are one or more of the following methods will be used to finish or produce a part or end product:</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 style="font-size: 30px; font-style: italic; font-family: 'Times New Roman', Times, serif;">Our Newlly added <span style="color: rgb(204, 101, 118);"> Fabricator projects</span> </h2>
+     <br><br>
+                    <div class="row team_inner">
+                       
+                        
+                        <% if(fabricatordata.length>0) {%>
+                                
+                            <% for(let fabricator of fabricatordata){ %>
+                            <div class="col-lg-4 col-md-6 int building ext">
+                                <div class="portfolio_item wow fadeInUp" data-wow-delay="300ms">
+                                    <div class="portfolio_img">
+                                        <img class="img-fluid"  src="/<%= fabricator.image %>"  alt="">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <%}}else{%>
+                              <h1>no data found</h1>
+                          <% } %>
+                        
+                      
+                    </div>
+                </div>
+            </section>
+            <!--================End Our Team Area =================-->
+
+            <!--================Client Logo Area =================-->
+            <section class="client_logo_area client_logo_two">
+                           </section>
+            <!--================End Client Logo Area =================-->
+
+        </div>
+
+        <%- include("common/footer") %>

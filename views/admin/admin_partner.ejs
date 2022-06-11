@@ -1,0 +1,110 @@
+<%- include("common/header.ejs") %>
+		<!--end header -->
+		<!--start page wrapper -->
+		<div class="page-wrapper">
+			<div class="page-content">
+				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+					<div class="breadcrumb-title pe-3">Dashboard</div>
+					<div class="ps-3">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 p-0">
+								<li class="breadcrumb-item"><a href="/admin_partner"><i class="bx bx-man"></i></a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Business partners</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				
+				<!--end row-->
+				<div class="row">
+					<div class="col-xl-2 d-flex"></div>
+					<div class="col-xl-8 d-flex">
+						<div class="card radius-10 w-100">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div>
+										<h5 class="mb-1">Add Partner</h5>
+									</div>
+								</div>
+								<br>
+								<form action="add_partner" method="post" class="row g-3 needs-validation" enctype="multipart/form-data">
+
+								
+									<label for="blog_title" class="form-label">Add partner Name </label>
+									<input id="blog_title" class="form-control form-control-sm mb-3" type="text" placeholder="Add Partner Name" aria-label=".form-control-sm example" name="partner_name" required>
+
+
+									<label for="blog_meta_description" class="form-label">Add partner Position</label>
+									<textarea id="blog_meta_description" class="form-control form-control-sm mb-3" placeholder="Add Partner Position" rows="3" aria-label=".form-control-sm example" name="partner_position" required></textarea>
+
+
+
+									<div class="mb-3">
+										<label for="blog_image" class="form-label">Add Partner Picture</label>
+										<input class="form-control" type="file" id="partner_image" name="image" required>
+									</div>
+
+
+									<div class="col-12">
+										<button class="btn btn-light" type="submit">Submit form</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-2 d-flex"></div>
+				</div>
+				<!--end row-->
+				<div class="row">
+					<div class="col-xl-12 d-flex">
+						<div class="card radius-10 w-100">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div>
+										<h5 class="mb-1">Partner ata</h5>
+									</div>
+								</div>
+								<div class="table-responsive mt-4">
+									<table class="table align-middle mb-0 table-hover table-striped text-center" id="blog-details">
+										<thead class="table-light">
+											<tr>
+												<th>Date & Time</th>
+												<th>partner Name</th>
+												<th>Partner post</th>
+												<th>Blog  Image</th>
+												<th >Action</th>
+											</tr>
+										</thead>
+										<% if(displaypartnerdata.length>0) {%>
+											<tbody id="blog-table">
+											  <% for(let partner of displaypartnerdata){ %>
+											  <tr>
+												<td><%= partner.created_at %></td>
+												<td><%= partner.partner_name %></td>
+												<td><%= partner.partner_position %></td>
+												<td><img src="/<%=partner.image%>" alt="Blog image" width="50px" height="50px"></td>
+												<td><a href="delete_partner/<%= partner._id%>" class="btn btn-danger">Delete</a></td>
+											  </tr>
+											  
+											</tbody>
+											<%}}else{%>
+											<h1>No Blog Found</h1>
+											<% } %>
+									</table>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end Row-->
+			</div>
+		</div>
+		<!--end page wrapper -->
+		<!--start overlay-->
+		<div class="overlay toggle-icon"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<%- include("common/footer.ejs") %>

@@ -1,0 +1,126 @@
+<%- include("common/header") %>
+
+
+
+<div class="container-fluid bg-secondary py-5">
+    <div class="container py-5">
+        <div class="row align-items-center py-4">
+            <div class="col-md-6 text-center text-md-left">
+                <h1 class="mb-4 mb-md-0 text-primary text-uppercase">Civil Work</h1>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="btn btn-outline-primary" href="">Services</a>
+                    <i class="fas fa-angle-double-right text-primary mx-2"></i>
+                    <a class="btn btn-outline-primary disabled" href="">Civil work</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- Page Header Start -->
+  
+  <br><br>
+       
+  
+
+
+            <!--================About Image Area =================-->
+           
+            <!--================End About Image Area =================-->
+            
+            <!--================Portfolio Area =================-->
+           
+           
+            <section class="our_team_area">
+                <div class="container">
+                    
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="main_title wow fadeIn">
+                                <h2 class="wow" data-splitting style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 30px;">It's all <span style="color: rgb(204, 101, 118);">about Civil </span> working</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="main_title">
+                                <p class="wow fadeInLeft" data-wow-delay="400ms" style="color: black; font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 20px;" >Civil work usually takes a long time to complete. It generates a lot of mess in the house which can affect existing furniture. The day laborers who do civil work related to masonry are pretty hard to work with, and its difficult to get this labor on your own. It also requires some scheduling as multiple teams have to work in parallel and in sync to get the work done. For example, after the bathroom tiles are broken, the piping has to be done, and the masons have to come back to fix the new tiles; electrical work has to be completed before plastering and the first coat of paint; electrical pipes need to be laid in the floor before the tiles are laid on top of them, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <h2 style="font-size: 30px; font-style: italic; font-family: 'Times New Roman', Times, serif;">Our Newlly added <span style="color: rgb(204, 101, 118);"> Civil Work projects</span> </h2>
+     <br><br>
+                    <div class="row team_inner">
+                        
+                        <% if(civilworkdata.length>0) {%>
+                                
+                            <% for(let civil of civilworkdata){ %>
+                            <div class="col-lg-4 col-md-6 int building ext">
+                                <div class="portfolio_item wow fadeInUp" data-wow-delay="300ms">
+                                    <div class="portfolio_img">
+                                        <img class="img-fluid"  src="/<%= civil.image %>"  alt="" style="height: 300px; width: 400px;">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <%}}else{%>
+                              <h1>no data found</h1>
+                          <% } %> 
+                       
+                       
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <!--================Feature Items Area =================-->
+            
+           
+            <section class="our_team_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="main_title wow fadeIn">
+                                <h2 class="wow" data-splitting style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 30px;">Purpose <span style="color: rgb(204, 101, 118);">Of Civil </span> working</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="main_title">
+                                <p class="wow fadeInLeft" data-wow-delay="400ms" style="color: black; font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 20px;" >As in our case, since we bought an old flat we decided to a whole bunch of civil work to get a newer feeling to the place. Firstly, we decided to redo the tiles and the bathrooms which meant breaking the existing tiles and bathrooms. Note that breakage adds significantly to the cost and the time. All the existing stuff has to be broken, taken away from the flat, and disposed off at a proper dump site by utilizing special tempos which do this work. Most of the delays in our case happened due to civil work. Material was not ordered in time, some of it was defective and had to be returned, laborers disappeared. Very little visible progress was being made and it seemed like things were taking forever to get completed. I have written details of each aspect of civil work further. </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row team_inner">
+                        <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="team_item">
+                                <div class="team_img">
+                                    <img class="img-fluid" src="img/data_networking/pic1.jpg" alt="" style="height: 350px;">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="team_item">
+                                <div class="team_img">
+                                    <img class="img-fluid" src="img/data_networking/pic2.jpg" alt="" style="height: 350px;">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="500ms">
+                            <div class="team_item">
+                                <div class="team_img">
+                                    <img class="img-fluid" src="img/data_networking/pic3.jpg" alt="" style="height: 350px;">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+            </section>
+
+        
+
+        <br><br>
+        
+  <%- include("common/footer") %>

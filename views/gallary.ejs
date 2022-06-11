@@ -1,0 +1,145 @@
+<%- include("common/header") %>
+
+
+<style>
+
+.our_projects_area .projects_tt {
+  overflow: hidden;
+  padding-bottom: 140px;
+  padding-top: 40px;
+}
+.our_projects_area {
+  overflow: hidden;
+}
+
+.projects_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  overflow: hidden;
+}
+
+.projects_inner .projects_column {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 50px 50px;
+  overflow: hidden;
+}
+
+.projects_inner .projects_item .hover .project_text h5 {
+  margin-bottom: 12px;
+  opacity: 1;
+}
+
+.projects_inner .projects_item .hover .project_text h4 {
+  opacity: 1;
+  margin-bottom: 0px;
+}
+
+
+    </style>
+
+<div class="container-fluid bg-secondary py-5">
+    <div class="container py-5">
+        <div class="row align-items-center py-4">
+            <div class="col-md-6 text-center text-md-left">
+                <h1 class="mb-4 mb-md-0 text-primary text-uppercase">Gallery</h1>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="btn btn-outline-primary" href="">Home</a>
+                    <i class="fas fa-angle-double-right text-primary mx-2"></i>
+                    <a class="btn btn-outline-primary disabled" href="">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+            <!--================Start Blog Banner Area =================-->
+            <section class="">
+                <div class="container">
+                    <div class="main_title ">
+                        <h2 class="wow" data-splitting style="font-size: 30px; font-style: italic; font-family: 'Times New Roman', Times, serif">Latest <span style="color: rgb(204, 101, 118);">Thoughts</span>, Ideas & Plans.
+                        </h2>
+                    </div>
+                </div>
+            </section>
+
+            <br><br>
+            <!--================End Blog Banner Area =================-->
+
+            <!--================Start Blog Grid Area =================-->
+            <section class="blog_grid_area">
+                <div class="container">
+                    <div class="row">
+                        <% if(gallerydata.length>0) {%>
+                                
+                            <% for(let gallery of gallerydata){ %>
+       
+                           
+                        <div class="col-lg-4 col-md-6">
+                            <div class="l_news_item wow fadeInUp" data-wow-delay="300ms">
+                                <div class="l_news_img">
+                                    <img class="img-fluid" src="/<%= gallery.image %>" alt="" style="height: 300px; width: 400px;">
+                                </div>
+                            </div>
+                        </div>
+                        <%}}else{%>
+                            <h1>no data found</h1>
+                        <% } %>
+                    </div>
+                </div>
+            </section>
+            <!--================End Blog Grid Area =================-->
+
+            <section class="our_projects_area">
+				<center><h1 class="wow" data-splitting style="font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif; color: greenyellow; font-size: 50px;"><b> <span> Some of our work videos </span></b></h1></center><br>
+				<div class="projects_inner">
+					<div class="row">
+                        
+					<div class="projects_column all inter">
+						<div class="projects_item">
+							<iframe width="420" height="315" src="https://www.youtube.com/embed/0eIKLxdlChs" allowfullscreen></iframe>
+							
+						</div>
+					</div>
+                    <br><br>
+					<div class="projects_column all inter ">
+						<div class="projects_item">
+							<iframe width="420" height="315" src="https://www.youtube.com/embed/huUolMkppFQ" allowfullscreen></iframe>
+							
+						</div>
+					</div>
+					
+                    <br><br>
+					
+                    <div class="projects_column all inter">
+						<div class="projects_item">
+							<iframe width="420" height="315" src="https://www.youtube.com/embed/0eIKLxdlChs" allowfullscreen></iframe>
+							
+						</div>
+					</div>
+                    <div class="projects_column all inter ">
+						<div class="projects_item">
+							<iframe width="420" height="315" src="https://www.youtube.com/embed/huUolMkppFQ" allowfullscreen></iframe>
+							
+						</div>
+					</div>
+                    
+					
+				
+                    </div>
+					
+				</div>
+			</section>
+        </div>
+        <%- include("common/footer") %>

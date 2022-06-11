@@ -1,0 +1,119 @@
+<%- include("common/header") %>
+  
+
+<div class="container-fluid bg-secondary py-5">
+  <div class="container py-5">
+      <div class="row align-items-center py-4">
+          <div class="col-md-6 text-center text-md-left">
+              <h1 class="mb-4 mb-md-0 text-primary text-uppercase">Exterior Service</h1>
+          </div>
+          <div class="col-md-6 text-center text-md-right">
+              <div class="d-inline-flex align-items-center">
+                  <a class="btn btn-outline-primary" href="">Services</a>
+                  <i class="fas fa-angle-double-right text-primary mx-2"></i>
+                  <a class="btn btn-outline-primary disabled" href="">Exterior</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Page Header Start -->
+
+
+<br><br>
+<section class="portfolio_area pb-174">
+  <div class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          
+          <div class="main_title">
+            <h3 class="wow" data-splitting style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 30px; margin: 40px;"><b> What exactly does an <span style="color: rgb(204, 101, 118);">exterior designer</span> do?</b></h3>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="main_title wow fadeInLeft" data-wow-delay="400ms">
+            <p style="color:black; font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 20px;">Exterior designers make exterior spaces functional, safe, and beautiful for almost every type of building. Interior designers make indoor spaces functional, safe, and beautiful by determining space requirements and selecting essential and decorative items, such as colors, lighting, and materials.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+     <h2 style="font-size: 30px; font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 30px;">Our Newlly added <span style="color: rgb(204, 101, 118);"> exterior projects</span></h2>
+     <br><br>
+      <div class="row portfolio_inner">
+         
+          
+        <% if(exteriordata.length>0) {%>
+                          
+          <% for(let exterior of exteriordata){ %>
+          <div class="col-lg-4 col-md-6 int building ext">
+              <div class="portfolio_item wow fadeInUp" data-wow-delay="300ms">
+                  <div class="portfolio_img">
+                      <img class="img-fluid"  src="/<%= exterior.image %>"  alt="">
+                  </div>
+                  
+              </div>
+          </div>
+          <%}}else{%>
+            <h1>no data found</h1>
+        <% } %>
+          
+
+          
+
+
+          
+      </div>
+  </div>
+</section>  
+      <!--================Latest Project Area =================-->
+      <section class="latest_project_area ">
+        
+        
+        <div class="container">
+          <div class="main_title">
+            <h3 class="wow" data-splitting><span class="color" style="color: rgb(204, 101, 118);"> Our Latest</span> Exterior Projects</h3>
+          </div>
+          <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="10000">
+                <div class="left_text">
+                  <h6>Interior</h6>
+                  <h4>Scandinavian Living Room</h4>
+                </div>
+                <img src="img/exterior/pic1.jpg" height="600px" width="500px" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-interval="2000">
+                <div class="left_text">
+                  <h6>Interior</h6>
+                  <h4>Citizen Complex Interior</h4>
+                </div>
+                <img src="img/exterior/pic2.jpg" height="600px" width="500px" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <div class="left_text">
+                  <h6>Architecture</h6>
+                  <h4>House On Water</h4>
+                </div>
+                <img src="img/exterior/pic3.jpg" height="600px" width="500px" class="d-block w-100" alt="...">
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </section>
+  <!--================End Latest Project Area =================-->
+      
+
+         <!--================End Portfolio Area =================-->
+    <!-------------------------------------------------------------->
+    
+      <!--================End Latest News Area =================-->
+    <!--floating button start-->
+    </div>
+    <!--floating button -->
+
+    <br><br>
+    <%- include("common/footer") %>

@@ -1,0 +1,115 @@
+<%- include("common/header") %>
+    <style>
+        .about_img_area {
+    height: 800px;
+    background: url(img/blog/pic1.jpg)  no-repeat scroll center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+    
+    }
+    </style>
+
+<div class="container-fluid bg-secondary py-5">
+    <div class="container py-5">
+        <div class="row align-items-center py-4">
+            <div class="col-md-6 text-center text-md-left">
+                <h1 class="mb-4 mb-md-0 text-primary text-uppercase">Blog</h1>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="btn btn-outline-primary" href="">Home</a>
+                    <i class="fas fa-angle-double-right text-primary mx-2"></i>
+                    <a class="btn btn-outline-primary disabled" href="">Blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<section class="">
+    <div class="container">
+        <div class="main_title ">
+            <h2 class="wow" data-splitting style="font-size: 30px; font-style: italic; font-family: 'Times New Roman', Times, serif">Our <span style="color: rgb(204, 101, 118);">Latest Blogs : </span>
+            </h2>
+        </div>
+    </div>
+</section>
+<br><br>
+            <section class="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="blog_details_info p_right">
+                                <% if(blogdata.length>0) {%>
+                                
+                                      <% for(let blog of blogdata){ %>
+
+                                
+                                <h2 class="blog_single_title">
+                                    <%= blog.blog_title %>
+                                </h2>
+
+                                <div class="post_date"><span>Admin</span> <%- blog.created_at %></div>
+
+                                <div class="single_img">
+                                    <img class="img-fluid" src="/<%= blog.image %>" alt="">
+                                </div>
+                              
+                                <p>
+                                    <%= blog.blog_meta_description %>
+                                </p>
+                                <p>
+                                    <%= blog.blog_description %>
+                                </p>
+                                
+                                <hr>
+                                <%}}else{%>
+                                    <h1>no data found</h1>
+                                    <% } %>
+
+                               
+                                
+                                    
+                                
+                                
+                                <div class="single_post_tag">
+                                    Tags:
+                                    <ul class="nav tag_links">
+                                        <li><a href="#">Inspiration,</a></li>
+                                        <li><a href="#">Workspace,</a></li>
+                                        <li><a href="#"> Minimal,</a></li>
+                                        <li><a href="#">Decoation</a></li>
+                                    </ul>
+                                </div>
+                                <div class="post_share">
+                                    Share:
+                                    <ul class="nav share_link">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="blog_sidebar">
+                                <div class="widget sidebar_widget widget_search">
+                                    <form action="#" class="search_form input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                                  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--================End blog Single Area =================-->
+            
+        </div>
+
+        <%- include("common/footer") %>

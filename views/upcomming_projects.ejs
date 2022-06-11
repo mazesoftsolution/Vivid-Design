@@ -1,0 +1,85 @@
+<%- include("common/header") %>
+
+
+<div class="container-fluid bg-secondary py-5">
+    <div class="container py-5">
+        <div class="row align-items-center py-4">
+            <div class="col-md-6 text-center text-md-left">
+                <h1 class="mb-4 mb-md-0 text-primary text-uppercase">Projects</h1>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="btn btn-outline-primary" href="">Home</a>
+                    <i class="fas fa-angle-double-right text-primary mx-2"></i>
+                    <a class="btn btn-outline-primary disabled" href="">Projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <br><br>
+            <!--================Our Team Area =================-->
+            <section class="our_team_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="main_title wow fadeIn">
+                                <h2 class="wow" data-splitting> <span style="color:rgb(204, 101, 118) ;font-size: 30px; font-style: italic; font-family: 'Times New Roman', Times, serif;"> Our Upcomming Project </span></h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="main_title">
+                                <p class="wow fadeInLeft" data-wow-delay="400ms" style="font-size: 25px; font-style: italic; font-family: 'Times New Roman', Times, serif; color: black;">At vero eos et accusamus et iusto odio
+                                    dignissimos ducimus qui blanditiis praesentium
+                                    voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                                    occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <section class="blog_grid_area">
+                        <div class="container">
+                            <div class="row">
+                                <% if(upcomingprojectdata.length>0) {%>
+                                
+                                    <% for(let upcoming of upcomingprojectdata){ %>
+                                <div class="col-lg-12">
+                                    <div class="l_news_item blog_list_item wow fadeInUp" data-wow-delay="300ms">
+                                        <a href="" class="l_news_img">
+                                            <img class="img-fluid" src="/<%= upcoming.image %>" alt="">
+                                        </a>
+                                        <div class="flipbox_text">
+                                            <h5> <%= upcoming.created_at %></h5>
+                                            <a href="#">
+                                                <h4> <%= upcoming.title %></h4>
+                                            </a>
+                                            <p> <%= upcoming.description %></p>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <%}}else{%>
+                                    <h1>no data found</h1>
+                                <% } %>
+                                
+                            </div>
+                        </div>
+                    </section>
+                    <!--================End Blog Grid Area =================-->
+        
+        
+                </div>
+                    </section>
+            <!--================End Our Team Area =================-->
+
+            <!--================Client Logo Area =================-->
+            <section class="client_logo_area client_logo_two">
+                
+            </section>
+            <!--================End Client Logo Area =================-->
+
+        </div>
+
+
+        <%- include("common/footer") %>

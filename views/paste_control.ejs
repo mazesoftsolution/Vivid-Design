@@ -1,0 +1,89 @@
+<%- include("common/header") %>
+
+
+
+<div class="container-fluid bg-secondary py-5">
+    <div class="container py-5">
+        <div class="row align-items-center py-4">
+            <div class="col-md-6 text-center text-md-left">
+                <h1 class="mb-4 mb-md-0 text-primary text-uppercase">Pest Control</h1>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="btn btn-outline-primary" href="">Services</a>
+                    <i class="fas fa-angle-double-right text-primary mx-2"></i>
+                    <a class="btn btn-outline-primary " href="/paste_control">Pest Control</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- Page Header Start -->
+
+  <br><br>
+  
+            <section class="experience_design_area ">
+                <div class="container">
+                    
+                    <div class="exp_design_text">
+                        <h2 style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 30px;">What  <span style="color: rgb(204, 101, 118);">is Pest </span>  Control </h2>
+                        <p style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 25px; color: black;">Pest control is the regulation or management of a species defined as a pest, a member of the animal kingdom that impacts adversely on human activities. The human response depends on the importance of the damage done and will range from tolerance, through deterrence and management, to attempts to completely eradicate the pest. Pest control measures may be performed as part of an integrated pest management strategy.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <br><br>
+            <div class="container">
+                <div class="row">
+                    <h2 style="font-size: 30px; font-style: italic; font-family: 'Times New Roman', Times, serif; color: rgb(204, 101, 118);"><u>Our Newlly added pest-control works</u> </h2>
+    <br><br>
+                    <div class="row team_inner">
+                       
+                       
+                        <% if(postcontroldata.length>0) {%>
+                                
+                            <% for(let paste of postcontroldata){ %>
+                            <div class="col-lg-4 col-md-6 int building ext">
+                                <div class="portfolio_item wow fadeInUp" data-wow-delay="300ms">
+                                    <div class="portfolio_img">
+                                        <img class="img-fluid"  src="/<%= paste.image %>"  alt="" style="height:300px;  width: 400px; ">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <%}}else{%>
+                              <h1>no data found</h1>
+                          <% } %>
+                        
+                      
+                    </div>
+                </div>
+            </div>
+          
+            <section class="our_team_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="main_title wow fadeIn">
+                                <h2 class="wow" data-splitting style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 30px;"> <span style="color:rgb(204, 101, 118) ;">Pest </span> Prevention</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="main_title">
+                                <p class="wow" data-splitting  style="color: black; font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 20px;">In agriculture, pests are kept at bay by cultural, chemical and biological means. Ploughing and cultivation of the soil before sowing mitigate the pest burden and there is a modern trend to limit the use of pesticides as far as possible. This can be achieved by monitoring the crop, only applying insecticides when necessary, and by growing varieties and crops which are resistant to pests. Where possible, biological means are used, encouraging the natural enemies of the pests and introducing suitable predators or parasites.
+                                    <br>  In homes and urban environments, the pests are the rodents, birds, insects and other organisms that share the habitat with humans, and that feed on and spoil possessions. Control of these pests is attempted through exclusion, repulsion, physical removal or chemical means. Alternatively, various methods of biological control can be used including sterilisation programmes.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </section>
+            <!--================End Our Team Area =================-->
+
+          
+
+        </div>
+<br><br>
+        <%- include("common/footer") %>

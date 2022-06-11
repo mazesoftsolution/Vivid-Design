@@ -1,0 +1,109 @@
+
+<%- include("common/header") %>
+
+
+<div class="container-fluid bg-secondary py-5">
+    <div class="container py-5">
+        <div class="row align-items-center py-4">
+            <div class="col-md-6 text-center text-md-left">
+                <h1 class="mb-4 mb-md-0 text-primary text-uppercase">Security-System-Lock</h1>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="btn btn-outline-primary" href="">Services</a>
+                    <i class="fas fa-angle-double-right text-primary mx-2"></i>
+                    <a class="btn btn-outline-primary " href="/paste_control">Security-System-Lock</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- Page Header Start -->
+<br><br>
+
+<section class="our_team_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="main_title wow fadeIn">
+                    <h2 class="wow" data-splitting style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 30px;">Our <span style="color: rgb(204, 101, 118);">Security </span> System</h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="main_title">
+                    <p class="wow fadeInLeft" data-wow-delay="400ms" style="color: black; font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 20px;" >The safety of your home can only be ensured with secure door access control systems. Dorset provides you maximum security with access control systems that are designed to to be controlled through a network. The manufacturer offers both door security systems and door access system. The door security system has manual locks with master key solution. The products in this range are ultra key locks and master key locks. The digital solutions offer fingerprint locks. These are high security locks that are specifically designed to keep your safe secure. Dorset manufactures strong and durable lock, so that you can sleep with peace at night.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row team_inner">
+            
+            
+            <% if(securitydata.length>0) {%>
+                    
+                <% for(let security of securitydata){ %>
+                <div class="col-lg-4 col-md-6 int building ext">
+                    <div class="portfolio_item wow fadeInUp" data-wow-delay="300ms">
+                        <div class="portfolio_img">
+                            <img class="img-fluid"  src="/<%= security.image %>"  alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+                <%}}else{%>
+                  <h1>no data found</h1>
+            <% } %>
+           
+
+            
+        </div>
+    </div>
+</section>
+            <section class="feature_area p-170">
+                <div class="container">
+                    <div class="row feature_inner">
+                        <div class="row">
+                           
+                            <div class="col-md-6">
+                                <h4 style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 30px;  margin: 50px;"><b>Euro Profile <span style="color: rgb(204, 101, 118);">Cylinder</span></b></h4>
+                            </div>
+                            <div class="col-md-6" data-wow-delay="300ms" >
+                                <div class="" style="margin: 0 5px;">
+                                    <p style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 20px;">Dorset is a leading name amongst euro profile cylinder lock manufacturers and suppliers in India. The euro profile cylinder lock system is specially designed for industrial use but can also be used in areas like bathroom etc. Euro locking technology gives you controlled access with maximum security. The euro profile cylinder lock solutions offered by Dorset have euro profile cylinder lock, euro profile cylinder-half lock, exact cylinder lock, construction key lock and super cylinder lock. The locks have features like both side keys, one side key and other side knob, one side knob and other side coin, one side key and one side knob. The available sizes are 60, 70, 80, 90 & 100 mm. Dorset also provides master keying facility if required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="row">
+                            
+                            <div class="col-md-6" data-wow-delay="400ms">
+                                <div class="">
+                                    <p style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 20px;">Dorset is a trusted name amongst mortise lock and tower bolts manufacturers. As a leading brand of mortise lock suppliers Dorset offers mortise lock solution to protect your house from burglars. The mortise lock system comprises of products like multi pin bolt mortise lock, mortise lever lock, mortise lock for steel doors, mortise lever dead lock, mortise latch lock and mortise lock for sliding doors. Benefit of installing mortise locks is that they can be locked from inside or outside the house. Dorset also manufactures door accessories like door handles and tower bolts for gates. The brass tower bolts and mortise locks are strong and durable.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 30px; margin: 50px;"><b>Mortise <span style="color: rgb(204, 101, 118);">Locks</b></span></h4>
+
+                            </div>
+                       </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 30px; margin: 50px;"><span style="color: rgb(204, 101, 118);"><b>Furniture</span> Locks</b></h4>
+
+                            </div>
+                            <div class="col-md-6" data-wow-delay="500ms">
+                                <div class="">
+                                    <p style="font-style: italic; font-family: 'Times New Roman', Times, serif; font-size: 20px;">As a leading brand amongst furniture lock manufacturers Dorset brings you furniture locks with high security. The furniture lock solution offered by the company includes normal and smart furniture locks for your small closets, wardrobes, cupboards, drawers etc. These multipurpose furniture locks comes in both round and square shape and are available in 22, 23, and 33 mm. The smart furniture locks have seamless body with brass bolt. The products like switch lock and hextech lock have dual click action solid bolt. The switch locks have 4 directions installation with 6 lever locking technology; whereas, the hextech lock has hexagonal dimple key for high security.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            
+
+        </div>
+
+        <%- include("common/footer") %>
